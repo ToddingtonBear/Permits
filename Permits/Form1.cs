@@ -40,8 +40,20 @@ namespace Permits
             fulldb.AutoResizeRows();
         }
 
+        private void Find()
+        { }
 
+        private void Clear()
+        { }
 
+        private void Add()
+        { }
+
+        private void Up()
+        { }
+
+        private void Delete()
+        { }
 
     }
 }
