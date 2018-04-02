@@ -1,0 +1,10 @@
+C:\Users\Chris\source\repos\Permits\Permits\bin\Debug\Permits.exe.config
+C:\Users\Chris\source\repos\Permits\Permits\bin\Debug\Permits.exe
+C:\Users\Chris\source\repos\Permits\Permits\bin\Debug\Permits.pdb
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.Permits.resources
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.Properties.Resources.resources
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.csproj.GenerateResource.Cache
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.csproj.CoreCompileInputs.cache
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.exe
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.pdb
+C:\Users\Chris\source\repos\Permits\Permits\obj\Debug\Permits.csprojResolveAssemblyReference.cache
