@@ -56,7 +56,11 @@ namespace Permits
         }
 
         private void Clear()
-        { }
+        {
+            //clear all text boxes
+            ID.Text = ""; owner.Text = ""; apnum.Text = ""; exp.Text = "";
+            v1.Text = ""; r1.Text = ""; v2.Text = ""; r2.Text = ""; v3.Text = ""; r3.Text = "";
+        }
 
         private void Add()
         {
@@ -74,7 +78,15 @@ namespace Permits
         { }
 
         private void Delete()
-        { }
+        {
+            con = new OleDbConnection(ConStr);  //new connection object with connection string 
+            cmd = new OleDbCommand();   //new command object 
+            cmd.Connection = con;   //assigns connection to command 
+            cmd.CommandText = "DELETE FROM Permits WHERE Student_ID= " + ID.Text;  //defines command '" + int.Parse(ID.Text) + "'
+            con.Open(); //open connection
+            cmd.ExecuteNonQuery();  //run command
+            con.Close();    //close connection
+        }
 
         private void addToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -86,6 +98,13 @@ namespace Permits
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Find();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clear();
+            Delete();
+            GetPermits();
         }
     }
 }
