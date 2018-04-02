@@ -23,21 +23,23 @@ namespace Permits
         public Permits()
         {
             InitializeComponent();
-            getPermitsf();
+            GetPermits();
         }
 
-        private void getPermitsf()
+        private void GetPermits()
         {
             con = new OleDbConnection(ConStr);  //new connection object with connection string 
             cmd = new OleDbCommand();   //new command object 
-            adapt = new OleDbDataAdapter(cmd);
+            adapt = new OleDbDataAdapter(cmd);  //new adapter object
             cmd.Connection = con;   //assigns connection to command 
             cmd.CommandText = "SELECT * FROM Permits";  //defines what command does
+           // con.Open();
             DataTable dt1 = new DataTable(); //defines table to be filled
             adapt.Fill(dt1);    //adapter fills table
             fulldb.DataSource = dt1;    //assigns table to a table in the form 
             fulldb.AutoResizeColumns();
             fulldb.AutoResizeRows();
+            //con.Close();
         }
 
         private void Find()
@@ -47,7 +49,16 @@ namespace Permits
         { }
 
         private void Add()
-        { }
+        {
+            con = new OleDbConnection(ConStr);  //new connection object with connection string 
+            cmd = new OleDbCommand();   //new command object 
+            //adapt = new OleDbDataAdapter(cmd);
+            cmd.Connection = con;   //assigns connection to command 
+            cmd.CommandText = "INSERT INTO Permits (Student_ID,Owner,Apartment,Expires,Vehicle_Model_1,Registration_1,Vehicle_Model_2,Registration_2,Vehicle_Model_3,Registration_3) VALUES ('" + int.Parse(ID.Text) + "','" + owner.Text + "','" + int.Parse(apnum.Text) + "','" + DateTime.Parse(exp.Text) + "','" + v1.Text + "','" + r1.Text + "','" + v2.Text + "','" + r2.Text + "','" + v3.Text + "','" + r3.Text + "'  )";  //defines what command does
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         private void Up()
         { }
@@ -55,5 +66,11 @@ namespace Permits
         private void Delete()
         { }
 
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Add();
+            GetPermits();
+
+        }
     }
 }

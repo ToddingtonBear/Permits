@@ -49,16 +49,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.owner = new System.Windows.Forms.TextBox();
+            this.apnum = new System.Windows.Forms.TextBox();
+            this.exp = new System.Windows.Forms.TextBox();
+            this.v1 = new System.Windows.Forms.TextBox();
+            this.r1 = new System.Windows.Forms.TextBox();
+            this.v2 = new System.Windows.Forms.TextBox();
+            this.r2 = new System.Windows.Forms.TextBox();
+            this.v3 = new System.Windows.Forms.TextBox();
+            this.r3 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fulldb)).BeginInit();
@@ -151,6 +151,7 @@
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
             this.addToolStripMenuItem1.Size = new System.Drawing.Size(41, 26);
             this.addToolStripMenuItem1.Text = "Add";
+            this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // clearToolStripMenuItem
             // 
@@ -192,16 +193,16 @@
             this.tableLayoutPanel2.Controls.Add(this.label8, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.label9, 8, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 9, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox7, 6, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox8, 7, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox9, 8, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox10, 9, 1);
+            this.tableLayoutPanel2.Controls.Add(this.ID, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.owner, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.apnum, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.exp, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.v1, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.r1, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.v2, 6, 1);
+            this.tableLayoutPanel2.Controls.Add(this.r2, 7, 1);
+            this.tableLayoutPanel2.Controls.Add(this.v3, 8, 1);
+            this.tableLayoutPanel2.Controls.Add(this.r3, 9, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 296);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -249,7 +250,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 14);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Expires";
+            this.label4.Text = "Expires dd/mm/yyyy";
             // 
             // label5
             // 
@@ -311,94 +312,94 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Registration 3";
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 51);
-            this.textBox1.TabIndex = 10;
+            this.ID.Location = new System.Drawing.Point(3, 17);
+            this.ID.Multiline = true;
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(72, 51);
+            this.ID.TabIndex = 10;
             // 
-            // textBox2
+            // owner
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(81, 17);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(72, 51);
-            this.textBox2.TabIndex = 11;
+            this.owner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.owner.Location = new System.Drawing.Point(81, 17);
+            this.owner.Multiline = true;
+            this.owner.Name = "owner";
+            this.owner.Size = new System.Drawing.Size(72, 51);
+            this.owner.TabIndex = 11;
             // 
-            // textBox3
+            // apnum
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(159, 17);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(72, 51);
-            this.textBox3.TabIndex = 12;
+            this.apnum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.apnum.Location = new System.Drawing.Point(159, 17);
+            this.apnum.Multiline = true;
+            this.apnum.Name = "apnum";
+            this.apnum.Size = new System.Drawing.Size(72, 51);
+            this.apnum.TabIndex = 12;
             // 
-            // textBox4
+            // exp
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(237, 17);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(72, 51);
-            this.textBox4.TabIndex = 13;
+            this.exp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exp.Location = new System.Drawing.Point(237, 17);
+            this.exp.Multiline = true;
+            this.exp.Name = "exp";
+            this.exp.Size = new System.Drawing.Size(72, 51);
+            this.exp.TabIndex = 13;
             // 
-            // textBox5
+            // v1
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(315, 17);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(72, 51);
-            this.textBox5.TabIndex = 14;
+            this.v1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.v1.Location = new System.Drawing.Point(315, 17);
+            this.v1.Multiline = true;
+            this.v1.Name = "v1";
+            this.v1.Size = new System.Drawing.Size(72, 51);
+            this.v1.TabIndex = 14;
             // 
-            // textBox6
+            // r1
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(393, 17);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(72, 51);
-            this.textBox6.TabIndex = 15;
+            this.r1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.r1.Location = new System.Drawing.Point(393, 17);
+            this.r1.Multiline = true;
+            this.r1.Name = "r1";
+            this.r1.Size = new System.Drawing.Size(72, 51);
+            this.r1.TabIndex = 15;
             // 
-            // textBox7
+            // v2
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(471, 17);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(72, 51);
-            this.textBox7.TabIndex = 16;
+            this.v2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.v2.Location = new System.Drawing.Point(471, 17);
+            this.v2.Multiline = true;
+            this.v2.Name = "v2";
+            this.v2.Size = new System.Drawing.Size(72, 51);
+            this.v2.TabIndex = 16;
             // 
-            // textBox8
+            // r2
             // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(549, 17);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(72, 51);
-            this.textBox8.TabIndex = 17;
+            this.r2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.r2.Location = new System.Drawing.Point(549, 17);
+            this.r2.Multiline = true;
+            this.r2.Name = "r2";
+            this.r2.Size = new System.Drawing.Size(72, 51);
+            this.r2.TabIndex = 17;
             // 
-            // textBox9
+            // v3
             // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(627, 17);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(72, 51);
-            this.textBox9.TabIndex = 18;
+            this.v3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.v3.Location = new System.Drawing.Point(627, 17);
+            this.v3.Multiline = true;
+            this.v3.Name = "v3";
+            this.v3.Size = new System.Drawing.Size(72, 51);
+            this.v3.TabIndex = 18;
             // 
-            // textBox10
+            // r3
             // 
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(705, 17);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(73, 51);
-            this.textBox10.TabIndex = 19;
+            this.r3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.r3.Location = new System.Drawing.Point(705, 17);
+            this.r3.Multiline = true;
+            this.r3.Name = "r3";
+            this.r3.Size = new System.Drawing.Size(73, 51);
+            this.r3.TabIndex = 19;
             // 
             // label11
             // 
@@ -457,16 +458,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox owner;
+        private System.Windows.Forms.TextBox apnum;
+        private System.Windows.Forms.TextBox exp;
+        private System.Windows.Forms.TextBox v1;
+        private System.Windows.Forms.TextBox r1;
+        private System.Windows.Forms.TextBox v2;
+        private System.Windows.Forms.TextBox r2;
+        private System.Windows.Forms.TextBox v3;
+        private System.Windows.Forms.TextBox r3;
         private System.Windows.Forms.Label label11;
     }
 }
