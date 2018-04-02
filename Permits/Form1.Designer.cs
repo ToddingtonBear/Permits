@@ -37,7 +37,7 @@
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.queries = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fulldb)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.queries)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.Controls.Add(this.fulldb, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip2, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.queries, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -83,11 +83,11 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(787, 479);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -100,7 +100,7 @@
             this.fulldb.Location = new System.Drawing.Point(3, 33);
             this.fulldb.Name = "fulldb";
             this.fulldb.ReadOnly = true;
-            this.fulldb.Size = new System.Drawing.Size(781, 227);
+            this.fulldb.Size = new System.Drawing.Size(781, 149);
             this.fulldb.TabIndex = 0;
             // 
             // menuStrip2
@@ -109,7 +109,7 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 370);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 292);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(787, 30);
             this.menuStrip2.TabIndex = 3;
@@ -134,7 +134,7 @@
             this.findToolStripMenuItem,
             this.addToolStripMenuItem1,
             this.clearToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 263);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 185);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(787, 30);
             this.menuStrip1.TabIndex = 2;
@@ -145,6 +145,7 @@
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.Size = new System.Drawing.Size(42, 26);
             this.findToolStripMenuItem.Text = "Find";
+            this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem1
             // 
@@ -159,16 +160,16 @@
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.clearToolStripMenuItem.Text = "Clear";
             // 
-            // dataGridView1
+            // queries
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 403);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(781, 73);
-            this.dataGridView1.TabIndex = 4;
+            this.queries.AllowUserToAddRows = false;
+            this.queries.AllowUserToDeleteRows = false;
+            this.queries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.queries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queries.Location = new System.Drawing.Point(3, 325);
+            this.queries.Name = "queries";
+            this.queries.Size = new System.Drawing.Size(781, 151);
+            this.queries.TabIndex = 4;
             // 
             // tableLayoutPanel2
             // 
@@ -204,7 +205,7 @@
             this.tableLayoutPanel2.Controls.Add(this.v3, 8, 1);
             this.tableLayoutPanel2.Controls.Add(this.r3, 9, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 296);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 218);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -428,7 +429,7 @@
             this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.queries)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -446,7 +447,7 @@
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView queries;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

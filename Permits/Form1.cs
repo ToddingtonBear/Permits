@@ -39,11 +39,21 @@ namespace Permits
             fulldb.DataSource = dt1;    //assigns table to a table in the form 
             fulldb.AutoResizeColumns();
             fulldb.AutoResizeRows();
-            //con.Close();
         }
 
         private void Find()
-        { }
+        {
+            con = new OleDbConnection(ConStr);  //new connection object with connection string 
+            cmd = new OleDbCommand();   //new command object 
+            adapt = new OleDbDataAdapter(cmd);  //new adapter object
+            cmd.Connection = con;   //assigns connection to command 
+            cmd.CommandText = "SELECT * FROM Permits WHERE Student_ID =" + int.Parse(ID.Text);  //defines command
+            DataTable dt2 = new DataTable(); //defines table to be filled
+            adapt.Fill(dt2);    //adapter fills table
+            queries.DataSource = dt2;    //assigns table to a table in the form 
+            queries.AutoResizeColumns();
+            queries.AutoResizeRows();
+        }
 
         private void Clear()
         { }
@@ -55,9 +65,9 @@ namespace Permits
             //adapt = new OleDbDataAdapter(cmd);
             cmd.Connection = con;   //assigns connection to command 
             cmd.CommandText = "INSERT INTO Permits (Student_ID,Owner,Apartment,Expires,Vehicle_Model_1,Registration_1,Vehicle_Model_2,Registration_2,Vehicle_Model_3,Registration_3) VALUES ('" + int.Parse(ID.Text) + "','" + owner.Text + "','" + int.Parse(apnum.Text) + "','" + DateTime.Parse(exp.Text) + "','" + v1.Text + "','" + r1.Text + "','" + v2.Text + "','" + r2.Text + "','" + v3.Text + "','" + r3.Text + "'  )";  //defines what command does
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            con.Open(); //open connection
+            cmd.ExecuteNonQuery();  //run command
+            con.Close();    //close connection
         }
 
         private void Up()
@@ -71,6 +81,11 @@ namespace Permits
             Add();
             GetPermits();
 
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Find();
         }
     }
 }
