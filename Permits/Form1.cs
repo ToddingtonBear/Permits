@@ -81,8 +81,9 @@ namespace Permits
         {
             con = new OleDbConnection(ConStr);  //new connection object with connection string 
             cmd = new OleDbCommand();   //new command object 
-            cmd.Connection = con;   //assigns connection to command 
-            cmd.CommandText = "DELETE FROM Permits WHERE Student_ID= " + ID.Text;  //defines command '" + int.Parse(ID.Text) + "'
+            adapt = new OleDbDataAdapter(cmd);  //new adapter object
+            cmd.Connection = con;   //assigns connection to command
+            cmd.CommandText = "DELETE FROM Permits WHERE Student_ID = ?";  //defines command
             con.Open(); //open connection
             cmd.ExecuteNonQuery();  //run command
             con.Close();    //close connection
